@@ -1,0 +1,18 @@
+#container {
+    width: 30%;
+     
+}
+
+h3 {
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+}

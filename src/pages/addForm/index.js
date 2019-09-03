@@ -9,19 +9,38 @@ class AddForm extends React.Component {
         super(props)
 
         this.state = {
-            name: "",
-            valueA: "",
-            valueB: "",
-            valueC: ""
+            cont : 0,
+            produto : {
+                name: "",
+                valueA: "",
+                valueB: "",
+                valueC: ""
+    
+            }
+
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleChange = this.handleChange.bind(this)
     }
 
     handleSubmit(e) {
-        alert(this.state.value)
-        console.log(this.state)
+        var c = this.state.cont
+        this.setState({const: c++})
         e.preventDefault()
+    }
+
+    handleChange(e){
+
+        const target = e.target
+        const value = target.value
+        const name = target.name
+
+        var p = this.state.produto
+
+        p[name] = value
+
+        this.setState({produto : p})
     }
 
     render() {
@@ -33,23 +52,23 @@ class AddForm extends React.Component {
                 <form onSubmit={this.handleSubmit}>
 
                     <input
-                    value={this.state.name} 
-                    onChange={e => this.setState({name: e.target.value})} 
+                    name='name'
+                    onChange={this.handleChange}
                     placeholder='Informe o nome do Produto' />
 
                     <input
-                    value={this.state.valueA} 
-                    onChange={e => this.setState({valueA: e.target.value})} 
+                    name='valueA'
+                    onChange={this.handleChange}
                     placeholder='Informe o preço do produto no mercado A' />
 
-                    <input 
-                    value={this.state.valueB} 
-                    onChange={e => this.setState({valueB: e.target.value})} 
+                    <input
+                    name='valueB'
+                    onChange={this.handleChange}
                     placeholder='Informe o preço do produto no mercado B' />
 
                     <input
-                    value={this.state.valueC} 
-                    onChange={e => this.setState({valueC: e.target.value})} 
+                    name='valueC'
+                    onChange={this.handleChange}
                     placeholder='Informe o preço do produto no mercado C' />
 
                     <input type='submit' value='Adicionar' />

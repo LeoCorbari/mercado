@@ -1,6 +1,7 @@
 #container {
-    width: 30%;
-     
+    max-width: 300px;
+    margin: 100px auto 0;
+    
 }
 
 h3 {
@@ -15,4 +16,18 @@ h3 {
 
 input {
     width: 100%;
+    margin: 5px;
+    height: 30px;
+    padding-left: 15px;
+    border: 0;
+    background-color: rgba(5, 97, 77, 0.171);
+    border-radius: 20px;
+
+}
+
+input[type="submit"] {
+    background-image: linear-gradient(to right, #1f4037 , #99f2c8);
+    color: #fff;
+    padding: 0;
+    cursor: pointer;
 }

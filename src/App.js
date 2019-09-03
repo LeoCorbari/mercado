@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Header from './components/header'
-import AddForm from './pages/addForm'
+import Routes from './routes'
 
 import './style.css'
 
@@ -11,7 +11,7 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <AddForm />
+        <Routes />
       </div>
       )
   }

@@ -9,7 +9,6 @@ class AddForm extends React.Component {
         super(props)
 
         this.state = {
-            cont : 0,
             produto : {
                 name: "",
                 valueA: "",
@@ -25,9 +24,13 @@ class AddForm extends React.Component {
     }
 
     handleSubmit(e) {
-        var c = this.state.cont
-        this.setState({const: c++})
+
+        let p = this.state.produto
+        let key = localStorage.length
+        localStorage.setItem('item-' + key, JSON.stringify(p))
+
         e.preventDefault()
+
     }
 
     handleChange(e){
@@ -36,7 +39,7 @@ class AddForm extends React.Component {
         const value = target.value
         const name = target.name
 
-        var p = this.state.produto
+        let p = this.state.produto
 
         p[name] = value
 

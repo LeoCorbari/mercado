@@ -26,7 +26,7 @@ input {
 }
 
 input[type="submit"] {
-    background-image: linear-gradient(to right, #1f4037 , #99f2c8);
+    background: rgb(5, 97, 77);
     color: #fff;
     padding: 0;
     cursor: pointer;

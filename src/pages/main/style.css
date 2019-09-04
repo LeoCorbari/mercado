@@ -1,4 +1,16 @@
 .list-item {
+    max-width: 600px;
     margin: 40px auto 0;
 
 }
+
+table {
+    width: 100%;
+    text-align: center;
+    
+}
+
+th {
+    background: rgb(5, 97, 77);
+    color: #fff;
+}   

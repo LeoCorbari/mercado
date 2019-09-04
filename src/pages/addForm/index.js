@@ -13,7 +13,8 @@ class AddForm extends React.Component {
                 name: "",
                 valueA: "",
                 valueB: "",
-                valueC: ""
+                valueC: "",
+                overview: 0
     
             }
 
@@ -21,6 +22,10 @@ class AddForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
+    }
+
+    checkOverview = () => {
+        //TO DO fazer a comparação do mais caro
     }
 
     handleSubmit(e) {

@@ -25,7 +25,7 @@ class AddForm extends React.Component {
     }
 
     checkOverview = () => {
-        //TO DO fazer a comparação do mais caro
+        //TODO fazer a comparação do mais caro
     }
 
     handleSubmit(e) {
@@ -33,7 +33,6 @@ class AddForm extends React.Component {
         let p = this.state.produto
         let key = localStorage.length
         localStorage.setItem('item-' + key, JSON.stringify(p))
-
         e.preventDefault()
 
     }
@@ -55,31 +54,33 @@ class AddForm extends React.Component {
         return (
             <div id='container'>
 
-                <h3>Novo Produto</h3>
-
                 <form onSubmit={this.handleSubmit}>
 
                     <input
                     name='name'
+                    className='form-input'
                     onChange={this.handleChange}
                     placeholder='Informe o nome do Produto' />
 
                     <input
                     name='valueA'
+                    className='form-input'
                     onChange={this.handleChange}
                     placeholder='Informe o preço do produto no mercado A' />
 
                     <input
                     name='valueB'
+                    className='form-input'
                     onChange={this.handleChange}
                     placeholder='Informe o preço do produto no mercado B' />
 
                     <input
                     name='valueC'
+                    className='form-input'
                     onChange={this.handleChange}
                     placeholder='Informe o preço do produto no mercado C' />
-
-                    <input type='submit' value='Adicionar' />
+                    
+                    <input className='form-input-btn' type='submit' value='Adicionar' />
 
                 </form>
             </div>

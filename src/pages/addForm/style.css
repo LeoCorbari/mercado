@@ -1,33 +1,29 @@
 #container {
-    max-width: 300px;
+    max-width: 315px;
     margin: 100px auto 0;
+    text-align: center;
     
 }
 
-h3 {
-    height: 60px;
-    width: 100%;
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-input {
-    width: 100%;
+.form-input, .form-input-btn {
+    width: 90%;
     margin: 5px;
     height: 30px;
     padding-left: 15px;
     border: 0;
     background-color: rgba(5, 97, 77, 0.171);
-    border-radius: 20px;
+    transition: 0.3s;
 
 }
 
-input[type="submit"] {
+.form-input:hover, .form-input-btn:hover, .form-input-btn:focus, .form-input:focus {
+    width: 100%;
+}
+
+.form-input-btn {
     background: rgb(5, 97, 77);
     color: #fff;
     padding: 0;
     cursor: pointer;
+    transition: 0.3s;
 }

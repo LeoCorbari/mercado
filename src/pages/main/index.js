@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Buttons from '../../components/footer/'
+
 import './style.css'
 
 class List extends React.Component {
@@ -87,8 +89,10 @@ class List extends React.Component {
                         <th>{this.state.totalC}</th>
                     </tfoot>
                 </table>
+                <Buttons />
             </div>
         )
+
     }
 
 }

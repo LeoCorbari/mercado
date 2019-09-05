@@ -1,5 +1,5 @@
 .footer-input {
-    width: 50%;
+    width: 49.6%;
     border: 0;
     color: #fff;
     padding: 0;
@@ -19,4 +19,5 @@
 
 .buttons-footer{
     width: 100%;
+    text-align: center;
 }

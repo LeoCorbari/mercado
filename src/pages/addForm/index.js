@@ -16,7 +16,9 @@ class AddForm extends React.Component {
                 valueC: "",
                 overview: 0
     
-            }
+            },
+            bigger: 0,
+            smaller: 100
 
         }
 
@@ -24,8 +26,14 @@ class AddForm extends React.Component {
         this.handleChange = this.handleChange.bind(this)
     }
 
-    checkOverview = () => {
-        //TODO fazer a comparação do mais caro
+    checkOverview = (item) => {
+        
+        if (item < this.state.smaller) {
+            this.setState({item: smaller})
+        } 
+        if(item > this.state.bigger) {
+            this.setState({item: b})
+        }
     }
 
     handleSubmit(e) {
@@ -33,6 +41,7 @@ class AddForm extends React.Component {
         let p = this.state.produto
         let key = localStorage.length
         localStorage.setItem('item-' + key, JSON.stringify(p))
+        this.props.history.goBack()
         e.preventDefault()
 
     }

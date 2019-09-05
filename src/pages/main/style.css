@@ -4,6 +4,10 @@
 
 }
 
+.expensive {
+    color: red;
+}
+
 table {
     width: 100%;
     text-align: center;

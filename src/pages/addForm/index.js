@@ -13,27 +13,14 @@ class AddForm extends React.Component {
                 name: "",
                 valueA: "",
                 valueB: "",
-                valueC: "",
-                overview: 0
+                valueC: ""
     
             },
-            bigger: 0,
-            smaller: 100
 
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
-    }
-
-    checkOverview = (item) => {
-        
-        if (item < this.state.smaller) {
-            this.setState({item: smaller})
-        } 
-        if(item > this.state.bigger) {
-            this.setState({item: b})
-        }
     }
 
     handleSubmit(e) {

@@ -13,8 +13,7 @@ class List extends React.Component {
             item: [],
             totalA: 0,
             totalB: 0,
-            totalC: 0,
-            ovrview: 0
+            totalC: 0
         }
 
     }
@@ -38,6 +37,18 @@ class List extends React.Component {
         console.log(list)
 
         this.setState({ item: list })
+
+    }
+
+    refreshState() {
+        localStorage.clear()
+        this.setState({
+            item: [],
+            totalA: 0,
+            totalB: 0,
+            totalC: 0,
+
+        })
 
     }
 
@@ -84,12 +95,25 @@ class List extends React.Component {
                     </tbody>
                     <tfoot>
                         <th>Total</th>
-                        <th>{this.state.totalA}</th>
-                        <th>{this.state.totalB}</th>
-                        <th>{this.state.totalC}</th>
+
+                        <th className={this.state.totalA > this.state.totalB
+                            && this.state.totalA > this.state.totalC ? 'expensive' : 'normal-in'}>
+                            {this.state.totalA}
+                        </th>
+
+                        <th className={this.state.totalB > this.state.totalA 
+                            && this.state.totalB > this.state.totalC ? 'expensive' : 'normal-in'}>
+                            {this.state.totalB}
+                        </th>
+
+                        <th className={this.state.totalC > this.state.totalA
+                            && this.state.totalC > this.state.totalB ? 'expensive' : 'normal-in'}>
+                            {this.state.totalC}
+                        </th>
+
                     </tfoot>
                 </table>
-                <Buttons />
+                <Buttons onRefreshState={() => this.refreshState()}/>
             </div>
         )
 

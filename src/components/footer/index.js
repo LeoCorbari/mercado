@@ -7,9 +7,10 @@ import './style.css'
 
 class Buttons extends React.Component {
 
-    clearStorage = (e) => {
-        localStorage.clear()
+    constructor(props){
+        super(props)
 
+        this.refreshState = props.onRefreshState
     }
 
     render() {
@@ -19,7 +20,7 @@ class Buttons extends React.Component {
                     <input className='footer-input' type='submit' value='Adicionar Produto' />
                 </Link>
                 <input className='footer-input' type='submit' value='Limpar Tabela'
-                    onClick={this.clearStorage} />
+                    onClick={() => this.refreshState()} />
             </div>
         )
     }
